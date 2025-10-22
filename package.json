@@ -1,0 +1,30 @@
+{
+  "name": "somoscredito-prueba",
+  "version": "1.0.0",
+  "description": "README.md\r # SomosCredito - Prueba Técnica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcordonrivera/prueba-tecnica-somoscredito.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kcordonrivera/prueba-tecnica-somoscredito/issues"
+  },
+  "homepage": "https://github.com/kcordonrivera/prueba-tecnica-somoscredito#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "sequelize": "^6.37.7",
+    "tedious": "^18.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
