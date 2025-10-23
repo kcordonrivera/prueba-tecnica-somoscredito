@@ -1,3 +1,4 @@
+// backend/config/db.js
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
@@ -6,11 +7,16 @@ const sequelize = new Sequelize(
   process.env.DB_USER,
   process.env.DB_PASS,
   {
+    dialect: 'mssql',
     host: process.env.DB_HOST,
-    dialect: process.env.DB_DIALECT,
-    port: process.env.DB_PORT,
+    port: parseInt(process.env.DB_PORT),
     dialectOptions: {
-      options: { encrypt: false } // para SQL Server local
+      options: {
+        instanceName: 'SQLEXPRESS01',  // nombre de la instancia en SQL Server
+        encrypt: true,
+        trustServerCertificate: true,
+        multipleActiveResultSets: false
+      }
     },
     logging: false
   }
